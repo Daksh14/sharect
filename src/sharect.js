@@ -53,8 +53,10 @@ const Sharect = (function(){
 
     function appendIconStyle() {
       const style = document.createElement('style')
-      style.innerHTML = `.sharect__icon{fill:${_iconColor};}`
-      document.body.appendChild(style)
+      if (document.body != null) {
+        style.innerHTML = `.sharect__icon{fill:${_iconColor};}`
+        document.body.appendChild(style)
+      }
     }
 
     function appendIcons() {
